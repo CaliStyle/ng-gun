@@ -7,17 +7,13 @@ import { NgGunService, NgGunRef, NgGunOptions } from './ng-gun.service'
     CommonModule
   ],
   declarations: [],
-  providers: [
-    // NgGunRef,
-    // NgGunService
-  ]
+  providers: []
 })
 export class NgGunModule {
   static forRoot(config?: NgGunOptions): ModuleWithProviders {
     return {
       ngModule: NgGunModule,
       providers: [
-        // NgGunRef,
         NgGunService,
         { provide: 'ngGunOptions', useValue: config }
       ]

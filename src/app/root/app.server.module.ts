@@ -18,6 +18,7 @@ import { SharedModule } from '../shared/shared.module'
 import { NgGunModule, NgGunOptions } from '../ngGun'
 const ngGunOptions: NgGunOptions = {
   // peers: [location.origin + '/gun']
+  peers: ['http://localhost:3000/gun']
 }
 
 @NgModule({
