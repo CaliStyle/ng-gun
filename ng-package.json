@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "name": "ng-gun",
+  "name": "ngx-gun",
   "version": "1.0.0",
   "licensePath": "LICENSE",
   "lib": {

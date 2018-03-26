@@ -3,6 +3,9 @@ Angular 5+ implementation of Gun.js. Supports AOT and SSR.
 
 Based on the incredible work by the Gun.js contributors.
 
+## Install
+`npm install ngx-gun --save`
+
 ## Config
 Configure the ng-gun options which are passed:
 
