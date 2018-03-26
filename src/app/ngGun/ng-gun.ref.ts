@@ -23,8 +23,6 @@ export class NgGunRef {
 
   /**
    * Create
-   * @param {} gun
-   * @returns {NgGunRef}
    */
   static create(gun: Gun) {
     const newRef = new NgGunRef()
@@ -34,8 +32,6 @@ export class NgGunRef {
 
   /**
    * Set Options
-   * @param {NgGunOptions} options
-   * @returns {NgGunRef}
    */
   opt(options: NgGunOptions): NgGunRef {
     this.gun.opt(options)
@@ -44,8 +40,6 @@ export class NgGunRef {
 
   /**
    * get
-   * @param {string} key
-   * @returns {NgGunRef}
    */
   get(key: string): NgGunRef {
     return NgGunRef.create(this.gun.get(key))
@@ -53,8 +47,6 @@ export class NgGunRef {
 
   /**
    * put
-   * @param data
-   * @returns {NgGunRef}
    */
   put(data: any): NgGunRef {
     return NgGunRef.create(this.gun.put(data))
@@ -62,8 +54,6 @@ export class NgGunRef {
 
   /**
    * set
-   * @param data
-   * @returns {NgGunRef}
    */
   set(data: any): NgGunRef {
     return NgGunRef.create(this.gun.set(data))
@@ -71,7 +61,6 @@ export class NgGunRef {
 
   /**
    * back
-   * @returns {NgGunRef}
    */
   back(): NgGunRef {
     return NgGunRef.create(this.gun.back())
@@ -79,7 +68,6 @@ export class NgGunRef {
 
   /**
    * map
-   * @returns {NgGunRef}
    */
   map(): NgGunRef {
     return NgGunRef.create(this.gun.map())
@@ -87,7 +75,6 @@ export class NgGunRef {
 
   /**
    * val
-   * @returns {Observable<T>}
    */
   val<T>(): Observable<T> {
     return Observable.create(o => {
@@ -101,7 +88,6 @@ export class NgGunRef {
 
   /**
    * on
-   * @returns {Observable<T>}
    */
   on<T>(): Observable<T> {
     return Observable.create(o => {
@@ -122,8 +108,6 @@ export class NgGunRef {
 
   /**
    * extractData
-   * @param data
-   * @returns {PartialObject<Object>}
    */
   private extractData(data) {
     return _.pickBy(data, (val, key) => val !== null && key !== '_')

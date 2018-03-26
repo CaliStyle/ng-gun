@@ -37,9 +37,10 @@
     "@angular/core": ">=5.0.0 <6.0.0",
     "@angular/router": ">=5.0.0 <6.0.0",
     "lodash": "^4.11.1",
-    "gun": "^0.9.7"
+    "gun": "^0.9.99"
   },
   "devDependencies": {
+    "gun": "^0.9.99",
     "@angular/animations": "^5.2.9",
     "@angular/common": "^5.2.9",
     "@angular/compiler": "^5.2.9",
@@ -87,6 +88,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "mocha": "^3.0.2",
+    "ng-packagr": "^2.2.0",
     "npm-run-all": "^4.1.2",
     "node-sass": "^4.7.2",
     "protractor": "~5.2.0",
