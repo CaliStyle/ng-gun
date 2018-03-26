@@ -1,6 +1,5 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core'
-import { Observable } from 'rxjs/Observable'
-import { NgEngineService } from '../../ngEngine/ng-engine.service'
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
+import { NgEngineService } from 'ng-engine'
 
 @Component({
   selector: 'app-home',
@@ -9,14 +8,15 @@ import { NgEngineService } from '../../ngEngine/ng-engine.service'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
-  public appState$: Observable<any>
-  public homeState$: Observable<any>
+  public app
+  public home
 
-  constructor(private _ngEngine: NgEngineService) { }
+  constructor(
+    private _ngEngine: NgEngineService
+  ) { }
 
   ngOnInit() {
-    this.appState$ = this._ngEngine.select('getAppState')
-    this.homeState$ = this._ngEngine.select('home', 'getHomeState')
-    this._ngEngine.dispatch('home', 'HelloWorldAction', 'Hello World')
+    this.app = this._ngEngine.config.get('app')
+    this.home = this._ngEngine.config.get('home')
   }
 }

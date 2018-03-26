@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
-import { NgEngineModule } from '../../ngEngine/ng-engine.module'
-import { NgEngine } from '../../ngEngine/ng-engine'
+import { NgEngineModule } from 'ng-engine'
 import { FiveZeroZeroComponent } from './500.component'
 
 describe('FiveZeroZeroComponent', () => {

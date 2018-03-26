@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, OnDestroy } from '@angular/core'
-import { NgEngineService } from '../ngEngine/ng-engine.service'
+import { NgEngineService } from 'ng-engine'
 import { NgGunService, NgGunRef } from '../ngGun'
 
 @Component({
@@ -21,9 +21,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     const title = this._ngEngine.config.get('app.title')
-    this._ngEngine.dispatch('app', 'SetTitleAction', {title: title})
-
     const testNode = this.db.get('test')
+
     this.subs = [
       // Keeps pushing values upon changes to this node:
       testNode.on().subscribe(data => { console.log(data) })

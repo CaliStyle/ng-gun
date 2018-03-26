@@ -2,10 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
 import { Router } from '@angular/router'
 import { Location } from '@angular/common'
-import { NgEngine } from '../ngEngine/ng-engine'
-import { NgEngineModule } from '../ngEngine/ng-engine.module'
+import { NgEngineModule, NgEngineService } from 'ng-engine'
 import { NgGunModule } from '../ngGun/ng-gun.module'
-import { NgEngineService } from '../ngEngine/ng-engine.service'
 import { AppComponent } from './app.component'
 
 
@@ -14,7 +12,7 @@ describe('AppComponent', () => {
   let location: Location
   let router: Router
   let fixture: ComponentFixture<AppComponent>
-  let ngEngineService: NgEngineService
+  // let ngEngineService: NgEngineService
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -30,8 +28,6 @@ describe('AppComponent', () => {
 
   beforeEach(() => {
     router = TestBed.get(Router)
-    ngEngineService = TestBed.get(NgEngineService)
-    spyOn(ngEngineService, 'dispatch').and.callThrough()
     location = TestBed.get(Location)
     fixture = TestBed.createComponent(AppComponent)
     component = fixture.componentInstance
