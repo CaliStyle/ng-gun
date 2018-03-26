@@ -25,18 +25,23 @@ export class AppComponent implements OnInit, OnDestroy {
 
     this.subs = [
       // Keeps pushing values upon changes to this node:
-      testNode.on().subscribe(data => { console.log(data) })
+      testNode.on().subscribe(data => {
+        console.log(data)
+      })
     ]
 
     // Gets data once and completes:
-    testNode.val().subscribe(data => { console.log(data) })
+    testNode.val().subscribe(data => {
+      console.log(data)
+    })
 
     testNode.put({testing: true})
 
     setTimeout(() => {
       testNode.put({testing: true, timestamp: new Date().getTime()})
-    }, 2000)
+    }, 1000)
   }
+
   ngOnDestroy() {
     this.subs.forEach(sub => {
       if (sub.unsubscribe) {
