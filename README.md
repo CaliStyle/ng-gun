@@ -1,4 +1,7 @@
 # ng-gun
+
+[![Build status][ci-image]][ci-url]
+
 Angular 5+ implementation of Gun.js. Supports AOT and SSR.
 
 Based on the incredible work by the Gun.js contributors.
