@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import * as Gun from 'gun/gun'
 import { Observable } from 'rxjs/Observable'
-import * as _ from 'lodash'
+import { isEmpty, pickBy } from 'lodash'
 import { NgGunOptions } from './ng-gun.options'
 
 @Injectable()
@@ -16,7 +16,7 @@ export class NgGunRef {
     this.gun = new Gun()
 
     // Apply any provided options if any
-    if (!_.isEmpty(options)) {
+    if (!isEmpty(options)) {
       this.gun.opt(options)
     }
   }
@@ -110,7 +110,7 @@ export class NgGunRef {
    * extractData
    */
   private extractData(data) {
-    return _.pickBy(data, (val, key) => val !== null && key !== '_')
+    return pickBy(data, (val, key) => val !== null && key !== '_')
   }
 
 }
